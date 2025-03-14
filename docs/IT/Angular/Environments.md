@@ -33,7 +33,7 @@ this.http.get<Array<Project>>({{environment.hostname}} + '/api/v1/sbml-core/proj
    ng build --configuration=yourConfig
 ```
 6. Для того, чтобы указать какой environment использовать для команды ng serve перейти
-   "architect" -> "build" -> "configurations". 
+   "architect" -> "serve" -> "configurations". 
 7. Для нужной конфигурации добавить свойство "browserTarget"
    ```json
    "browserTarget": "sbml-frontend-adapter:build:yourConfig",
