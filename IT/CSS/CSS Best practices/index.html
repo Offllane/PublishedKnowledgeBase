@@ -1,0 +1,2924 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1.%20%40mixin%20and%20%40include/">
+      
+      
+        <link rel="next" href="../%D0%91%D0%AD%D0%9C/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.iso">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+    
+    
+      
+        <title>CSS Best practices - Offllane's Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Offllane&#39;s Knowledge Base" class="md-header__button md-logo" aria-label="Offllane's Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Offllane's Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CSS Best practices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Offllane&#39;s Knowledge Base" class="md-nav__button md-logo" aria-label="Offllane's Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Offllane's Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offllane Knowledge Base
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Note%20Example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Пример записки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            IT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Angular
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Angular
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Angular/%2AngFor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    *ngFor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Angular/0.%20Angular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Angular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Angular/Angular%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D1%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Angular директивы
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Angular/Environments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Angular/Proxy%20%D0%B2%20Angular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxy в Angular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0.%20CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.%20%40mixin%20and%20%40include/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. @mixin and @include
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CSS Best practices
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CSS Best practices
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Однонаправленнная верстка
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Инкапсулируй то, что может быть изменено. (Не повторяйся)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Стандартизация
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Как переиспользовать стили
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-z-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. z-index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Медиа запросы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 Про !important
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%D0%91%D0%AD%D0%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    БЭМ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Методология
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_6" id="__nav_3_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Flex
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Flex
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flex/Flex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flex/flex-grow%2C%20flex-shrink%2C%20flex-basis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flex grow, flex shrink, flex basis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/0.%20Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D0%BE%D0%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Правила именования коммитов
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML/0.%20HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML/HTML%20Best%20Practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML Best Practices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML/%D0%90%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%20inputmode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Атрибут inputmode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    JS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/0.%20JavaScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Closures%20%28%D0%97%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Closures (Замыкания)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Document%20Object%20Model%20%28DOM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Document Object Model (DOM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Event%20%20Loop%20%28%D0%A6%D0%B8%D0%BA%D0%BB%20%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event  Loop (Цикл событий)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Falsy%20%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Falsy значения
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Hositing%20%28%D0%B2%D1%81%D0%BF%D0%BB%D1%8B%D1%82%D0%B8%D0%B5%2C%20%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hositing (всплытие, поднятие)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/IIFE%28Immediately%20Invoked%20Function%20Expression%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IIFE(Immediately Invoked Function Expression)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Map
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Promises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Promises
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Scope%20%28%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%20%D0%B2%D0%B8%D0%B4%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scope (область видимости)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Set/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Temporal%20Dead%20Zone%20%28TDZ%2C%20%D0%92%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%9C%D0%B5%D1%80%D1%82%D0%B2%D0%B0%D1%8F%20%D0%97%D0%BE%D0%BD%D0%B0%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Temporal Dead Zone (TDZ, Временная Мертвая Зона)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/async%20and%20await/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Async and await
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%91%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D1%8B%D0%B5%20%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D1%8B%20%D0%BC%D1%83%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Безопасные способы мутировать объект
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%94%D0%BB%D1%8F%20%D1%87%D0%B5%D0%B3%D0%BE%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D1%82%D1%81%D1%8F%20%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%27/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Для чего используется оператор '
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%9A%D0%B0%D0%BA%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9%20%D0%B2%20%D0%BE%D0%B4%D0%BD%D1%83%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D1%83%3F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Как записать несколько выражений в одну строку?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%9B%D0%B5%D0%BA%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%28LexicalEnvironment%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Лексическое окружение (LexicalEnvironment)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20typeof/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Оператор typeof
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%9E%D1%82%D0%BB%D0%B8%D1%87%D0%B8%D0%B5%20var%20%D0%BE%D1%82%20let/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Отличие var от let
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%A0%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0%20%D0%BC%D0%B5%D0%B6%D0%B4%D1%83%20%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B0%D0%BC%D0%B8%20event.preventDefault%28%29%20%D0%B8%20event.stopPropagation%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Разница между методами event.preventDefault() и event.stopPropagation()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%A2%D0%B8%D0%BF%D1%8B%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85%20%D0%B2%20JavaScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Типы данных в JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Функция итератор и генераторы
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Функция конструктор
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%A5%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D0%BF%D0%BE%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B5%20%D0%B8%20%D0%BF%D0%BE%20%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8E/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Хранение переменных по ссылке и по значению
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/%D0%A7%D1%82%D0%BE%20%D1%82%D0%B0%D0%BA%D0%BE%D0%B5%20JavaScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Что такое JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    TS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            TS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TS/0.%20TypeScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. TypeScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TS/TS%20Best%20Practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Никогда не дублируй типы
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TS/%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%20%D0%B2%20%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%20%D0%BE%D1%82%20%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B4%D1%80%D1%83%D0%B3%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Добавление свойств в зависимости от значения другого свойства
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Задачи
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Задачи
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/0.%20%D0%92%D1%81%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Все задачи
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8%20Closures%20%28%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задачи Closures (замыкания)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8%20Event%20loop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задачи Event loop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8%20Hoisiting%20%28%D0%B2%D1%81%D0%BF%D0%BB%D1%8B%D1%82%D0%B8%D0%B5%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задачи Hoisiting (всплытие)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8%20Map%20%D0%B8%20Set/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задачи Map и Set
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8%20Promises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задачи Promises
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Общие задачи
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ООП
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            ООП
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%9E%D0%9F/0.%20%D0%9E%D0%9E%D0%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. ООП
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%9E%D0%9F/%D0%9E%D0%9E%D0%9F.%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5%20%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ООП. Основные понятия
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%9E%D0%9F/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5%20%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%86%D0%B8%D0%B8%20%D0%9E%D0%9E%D0%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Основные концепции ООП
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Общее
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Общее
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/0.%20%D0%9E%D0%B1%D1%89%D0%B8%D0%B5%20%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Общие понятия программирования
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/Best%20Practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/Cookie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cookie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/HTTP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/LocalStorage%2C%20SessionStorage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LocalStorage, SessionStorage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/REST%20API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0%20%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Архитектура браузера
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0%20%D0%B4%D0%B2%D0%B8%D0%B6%D0%BA%D0%B0%20%D1%80%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Архитектура движка рендера
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%B8%D0%B5%20%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0%20%D1%87%D0%B8%D1%81%D1%82%D0%BE%D0%B3%D0%BE%20%D0%BA%D0%BE%D0%B4%D0%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Краткие правила чистого кода
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%9E%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%2C%20%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D0%B8%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Объявление, определение и инициализация
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%9E%D1%82%D0%BB%D0%B8%D1%87%D0%B8%D0%B5%20%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%8F%20%D0%B2%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Отличие свойства и поля в объекте
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0%20%D1%87%D0%B8%D1%81%D1%82%D0%BE%D0%B3%D0%BE%20%D0%BA%D0%BE%D0%B4%D0%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Правила чистого кода
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%A1%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D1%8B%20%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85%20%D0%B2%20%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Способы хранения данных в браузере
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%A1%D1%82%D0%B0%D0%B4%D0%B8%D0%B8%20%D0%BE%D1%82%D1%80%D0%B8%D1%81%D0%BE%D0%B2%D0%BA%D0%B8%20%28%D1%80%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%B0%29%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B%20%D0%B2%20%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Стадии отрисовки (рендера) страницы в браузере
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10_16" id="__nav_3_10_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Принципы разработки
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_16">
+            <span class="md-nav__icon md-icon"></span>
+            Принципы разработки
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8/0.%20%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Принципы разработки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8/SOLID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SOLID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%9E%D0%B1%D1%89%D0%B5%D0%B5/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8/%D0%94%D0%BB%D1%8F%20%D1%87%D0%B5%D0%B3%D0%BE%20%D0%BD%D1%83%D0%B6%D0%BD%D1%8B%20%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%3F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Для чего нужны принципы разработки?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Копирайтинг
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Копирайтинг
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%D0%9A%D0%BE%D0%BF%D0%B8%D1%80%D0%B0%D0%B9%D1%82%D0%B8%D0%BD%D0%B3/%D0%9A%D0%BE%D0%BF%D0%B8%D1%80%D0%B0%D0%B9%D1%82%D0%B8%D0%BD%D0%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Копирайтинг
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%D0%9A%D0%BE%D0%BF%D0%B8%D1%80%D0%B0%D0%B9%D1%82%D0%B8%D0%BD%D0%B3/%D0%9F%D0%B8%D1%81%D0%B0%D1%82%D1%8C%20%D0%BA%D1%80%D0%B0%D1%82%D0%BA%D0%BE%2C%20%D1%8F%D1%81%D0%BD%D0%BE%20%D0%B8%20%D1%83%D0%B1%D0%B5%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Писать кратко, ясно и убедительно
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Однонаправленнная верстка
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Инкапсулируй то, что может быть изменено. (Не повторяйся)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Стандартизация
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Как переиспользовать стили
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-z-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. z-index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Медиа запросы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 Про !important
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>CSS Best practices</h1>
+
+<h2 id="11">1.1 Однонаправленнная верстка<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<p>Не должно быть одновременно верхних и нижних отступов в верстке. Точно также не должно быть одновременно правых и левых отступов. Это сделано из-за схлопывания маргинов (когда маргины накладываются друг на друга). Можно пользоваться таким принципом: блок не должен волноваться о том, какой отступ будет между ним и следующим блоком. Т.е. маргины должны быть левый и верхний.<img alt="Pasted image 20230728214342.png" src="../../../files/Pasted%20image%2020230728214342.png" /></p>
+<h2 id="12">1.2 Инкапсулируй то, что может быть изменено. (Не повторяйся)<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
+<p>Обязательно необходимо использовать переменные для всего, что может быть изменено и впоследствии измениться.<br />
+<div class="highlight"><pre><span></span><code><span class="nc">.header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nt">var</span><span class="o">(</span><span class="nt">--ui-color-background</span><span class="o">);</span>
+<span class="w">    </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">var</span><span class="o">(</span><span class="nt">--header-size</span><span class="o">);</span>
+
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="nt">модификатор</span><span class="w"> </span><span class="o">(</span><span class="nt">s</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nt">m</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nt">lg</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nt">xlg</span><span class="o">)</span><span class="w"> </span><span class="nt">для</span><span class="w"> </span><span class="nt">разных</span><span class="w"> </span><span class="nt">размеров</span>
+<span class="w">    </span><span class="nt">border-raduis</span><span class="nd">:</span><span class="w"> </span><span class="nt">var</span><span class="o">(</span><span class="nt">--ui-radius-m</span><span class="o">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="13">1.3 Стандартизация<a class="headerlink" href="#13" title="Permanent link">&para;</a></h2>
+<p>Стандартизировать все. В идеале использовать ui-kit и не писать больше css код (кроме всяких маргинов и прочего. <br />
+Особенно важно стандартизировать текст. Должно быть около 5-6 типов текстов, которые заданы через <a href="../1.%20%40mixin%20and%20%40include/">миксины</a> или переменные.</p>
+<h2 id="14">1.4 Как переиспользовать стили<a class="headerlink" href="#14" title="Permanent link">&para;</a></h2>
+<p>Пример не очень хорошего кода:<br />
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">pink</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">card_black</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Вот какая логика мыслей может быть на примере Angular приложения:<br />
+Возможно перед нами один и тот же компонент? <br />
+<img alt="Pasted image 20230728221313.png" src="../../../files/Pasted%20image%2020230728221313.png" /><br />
+Если это одна и та же сущность, то необходимо решать проблему темезации. В идеале компонент должен принимать тему и в зависимости от нее адаптировать компонент.<br />
+Пример кода с темезацией:<br />
+<div class="highlight"><pre><span></span><code><span class="nc">.card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">16px</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">background-color</span><span class="nd">:</span><span class="w"> </span><span class="nt">pink</span><span class="o">;</span>
+
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="nt">Название</span><span class="w"> </span><span class="nt">темы</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="nt">отдельное</span><span class="w"> </span><span class="nt">искусство</span>
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="nt">Нужно</span><span class="w"> </span><span class="nt">соблюсти</span><span class="w"> </span><span class="nt">баланс</span><span class="w"> </span><span class="nt">между</span><span class="w"> </span><span class="nt">конкретикой</span><span class="w"> </span><span class="nt">и</span><span class="w"> </span><span class="nt">абстракцией</span>
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="nt">black</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="nt">нельзя</span><span class="w"> </span><span class="nt">назвать</span><span class="o">,</span><span class="w"> </span><span class="nt">потому</span><span class="w"> </span><span class="nt">что</span><span class="w"> </span><span class="nt">дизайн</span><span class="w"> </span><span class="nt">может</span><span class="w"> </span><span class="nt">стать</span><span class="w"> </span><span class="nt">темно-серым</span>
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="nt">Придется</span><span class="w"> </span><span class="nt">переименовывать</span>
+<span class="w">    </span><span class="k">&amp;</span><span class="nt">_dark</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">background-color</span><span class="nd">:</span><span class="w"> </span><span class="nt">black</span><span class="o">;</span>
+<span class="w">        </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">white</span><span class="o">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Если компоненты логически очень схожи, но HTML - разметка разметка очень разная. <br />
+<img alt="Pasted image 20230728223539.png" src="../../../files/Pasted%20image%2020230728223539.png" />Тогда в идеале стоит создать абстрактный компонент, который будут имплементировать компоненты братья. <br />
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="k">abstract</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">CardComponent</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">// Абстрактная карточка</span>
+</code></pre></div><br />
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">CoolCardComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">CardComponent</span><span class="p">{}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">DumbCardComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">CardComponent</span><span class="p">{}</span>
+</code></pre></div></p>
+<p>Важно выделить общие <a href="../1.%20%40mixin%20and%20%40include/">миксины</a> и положить их на уровне абстрактного компонента.<br />
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> card</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">16px</span><span class="o">;</span><span class="w">  </span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span><span class="w">  </span>
+<span class="w">  </span><span class="nt">background-color</span><span class="nd">:</span><span class="w"> </span><span class="nt">pink</span><span class="o">;</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div><br />
+Теперь компоненты дети смогут использовать миксины из абстракции.<br />
+<div class="highlight"><pre><span></span><code><span class="c1">// Стили компонента CoolCard  </span>
+<span class="nc">.cool-card</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> card</span><span class="p">;</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div><br />
+<div class="highlight"><pre><span></span><code><span class="c1">// Стили компонента DumbCard  </span>
+<span class="nc">.dumb-card</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> card</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">  </span><span class="c1">// Переопределяем стили, которые отличаются от общих  </span>
+<span class="w">  </span><span class="nt">background-color</span><span class="nd">:</span><span class="w"> </span><span class="nt">black</span><span class="o">;</span><span class="w">  </span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">white</span><span class="o">;</span><span class="w">  </span>
+
+<span class="w">  </span><span class="k">&amp;</span><span class="nt">__image</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">    </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">72px</span><span class="o">;</span><span class="w">  </span>
+<span class="w">  </span><span class="p">}}</span>
+</code></pre></div></p>
+<p>Чаще всего в проекте уже используется один компонент, а потом появляется другой. В идеале нужно сделать рефактор на вариант с абстрактным компонентом. Но если не получается, то можно считать один компонент базовым.<br />
+Нужно выделить в этом компоненте общие стили в миксины и уже в компонентах братьях использовать их.</p>
+<p>Если компоненты совсем разные, но переиспользовать стили нужно, то необходимо нужные стили выделить в <a href="../1.%20%40mixin%20and%20%40include/">миксины</a>, сложить их на общий уровень и использовать дальше везде, где это необходимо.<br />
+<div class="highlight"><pre><span></span><code><span class="c1">// Общие стили  </span>
+<span class="k">@mixin</span><span class="nf"> ui-border</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span><span class="w">  </span>
+<span class="p">}</span><span class="w">  </span>
+
+<span class="c1">// ... //  </span>
+
+<span class="nc">.card</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> ui-border</span><span class="p">;</span><span class="w">  </span>
+<span class="w">  </span><span class="c1">// Другие стили карточки  </span>
+<span class="p">}</span><span class="w">  </span>
+
+<span class="c1">// ... //  </span>
+
+<span class="nc">.table</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> ui-border</span><span class="p">;</span><span class="w">  </span>
+<span class="w">  </span><span class="c1">// Другие стили таблцы  </span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="15-z-index">1.5. z-index<a class="headerlink" href="#15-z-index" title="Permanent link">&para;</a></h2>
+<p>Необходимо соблюдать четкую систему z-indexов. Нужно вынести индексы в переменные и использовать только их. Необходимо договориться о том, какие индексы вообще необходимы. <br />
+Например: <br />
+    z-index: 0-2: для элементов которые по какой то причине наползают на другие элементы в общем потоке. <br />
+    z-index: 3: для затемняющих и блюрящих масок.<br />
+    z-index:4: для сайдбаров.<br />
+    z-index:5: для модалок.<br />
+    z-index:6: для случаев исключений.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$ui-index-1</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// using for elements that should overlap elements in standard flow  </span>
+<span class="nv">$ui-index-2</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// using for elements that should overlap elements in standard flow  </span>
+<span class="nv">$ui-index-3</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// using for blurred masks  </span>
+<span class="nv">$ui-index-4</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// using for sidebar and header  </span>
+<span class="nv">$ui-index-5</span><span class="o">:</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// using for modal  </span>
+<span class="nv">$ui-index-6</span><span class="o">:</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// overlaps everything</span>
+</code></pre></div>
+<h2 id="16">1.6 Медиа запросы<a class="headerlink" href="#16" title="Permanent link">&para;</a></h2>
+<p>Конфигурация медиазапросов должна также храниться в переменных.<br />
+<div class="highlight"><pre><span></span><code><span class="nv">$ui-media-retina</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)&#39;</span><span class="p">;</span>
+
+<span class="nv">$ui-mobile</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;screen and (max-width: 47.9625em)&#39;</span><span class="p">;</span>
+<span class="nv">$ui-mobile-min</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;screen and (min-width: 22.5em)&#39;</span><span class="p">;</span>
+<span class="nv">$ui-mobile-interval</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(min-width: 22.5em) and (max-width: 47.9625em)&#39;</span><span class="p">;</span>
+
+<span class="nv">$ui-tablet</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;screen and (max-width: 63.9625em)&#39;</span><span class="p">;</span>
+<span class="nv">$ui-tablet-min</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;screen and (min-width: 48em)&#39;</span><span class="p">;</span>
+<span class="nv">$ui-tablet-interval</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(min-width: 48em) and (max-width: 63.9625em)&#39;</span><span class="p">;</span>
+
+<span class="nv">$ui-desktop</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;screen and (max-width: 79.9625em)&#39;</span><span class="p">;</span>
+<span class="nv">$ui-desktop-min</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;screen and (min-width: 64em)&#39;</span><span class="p">;</span>
+<span class="nv">$ui-desktop-interval</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(min-width: 64em) and (max-width: 79.9625em)&#39;</span><span class="p">;</span>
+
+<span class="nv">$ui-desktop-lg-min</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;screen and (min-width: 80em)&#39;</span><span class="p">;</span>
+
+<span class="nv">$ui-mouse-device</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(hover: hover) and (pointer: fine)&#39;</span><span class="p">;</span>
+<span class="nv">$ui-touch-device</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(hover: none) and (pointer: coarse)&#39;</span><span class="p">;</span>
+
+<span class="k">@media</span><span class="w"> </span><span class="si">#{</span><span class="nv">$ui-mouse-device</span><span class="si">}</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nt">black</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="17-important">1.7 Про !important<a class="headerlink" href="#17-important" title="Permanent link">&para;</a></h2>
+<p>Лучше никогда им не пользоваться. Но если без этого никуда, то обязательно использовать комментарий-оправдание.<br />
+<div class="highlight"><pre><span></span><code><span class="nc">.card</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">  </span><span class="nt">margin-top</span><span class="nd">:</span><span class="w"> </span><span class="nt">2rem</span><span class="w"> </span><span class="o">!</span><span class="nt">important</span><span class="o">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">HACK</span><span class="nc">.</span><span class="w"> </span><span class="nt">Need</span><span class="w"> </span><span class="nt">to</span><span class="w"> </span><span class="nt">redefine</span><span class="w"> </span><span class="nt">fucking</span><span class="w"> </span><span class="nt">bootstrap</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
