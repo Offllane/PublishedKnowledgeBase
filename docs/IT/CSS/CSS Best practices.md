@@ -171,3 +171,68 @@ $ui-touch-device: '(hover: none) and (pointer: coarse)';
   margin-top: 2rem !important; // HACK. Need to redefine fucking bootstrap  
 }
 ```
+
+## 2. Правила форматирования стилей
+### 2.1 Каждое свойство на отдельной строке
+>[!fail] Неправильно
+>```css
+>#snapshot-box h2 { padding: 0 0 6px 0; font-weight: bold; position: absolute; left: 0; top: 0; }
+>```
+
+>[!success] Правильно
+>```css
+>#snapshot-box h2 {  
+  position: absolute;  
+  left: 0;  
+  top: 0;  
+  padding: 0 0 6px 0;  
+  font-weight: bold;  
+}
+>```
+
+### 2.2 Каждый селектор на отдельной строке
+>[!fail] Неправильно
+>```css
+>#snapshot-box h2, #profile-box h2, #order-box h2 {  
+  padding: 0 0 6px 0;  
+  font-weight: bold;  
+}
+>```
+
+>[!success] Правильно
+>```css
+>#snapshot-box h2,  
+#profile-box h2,  
+#order-box h2 {  
+  padding: 0 0 6px 0;  
+  font-weight: bold;  
+}
+>
+>// or
+:is(#snapshot-box, #profile-box, #order-box) h2 {  
+  padding: 0 0 6px 0;  
+  font-weight: bold;  
+}
+>```
+
+### 2.3 Свойства, которые сильнее влияют на элемент, идут первыми
+Рекомендуется располагать свойства в следующем порядке:
+1. Сначала положение элемента относительно других: `position`, `left/right/top/bottom`, `float`, `clear`, `z-index`.
+2. Затем размеры и отступы: `width`, `height`, `margin`, `padding`…
+3. Рамка `border`, она частично относится к размерам.
+4. Общее оформление содержимого: `list-style-type`, `overflow`…
+5. Цветовое и стилевое оформление: `background`, `color`, `font`…
+
+```css
+.equipment-list {  
+  position: relative;  
+  display: flex;  
+  align-items: center;  
+  gap: 4px;  
+  min-width: 100px;  
+  padding: 10px;  
+  font-size: 16px;  
+  font-weight: 300;  
+  overflow: hidden;  
+}
+```
