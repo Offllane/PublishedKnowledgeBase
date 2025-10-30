@@ -29,13 +29,13 @@ const logToConsole = function () {
 	link: null,
 	variables: {
 		x: 1,
-		logToConole: 
+		logToConole: function() {...}
 	}
 }
 ```
 
 2. Создается локальное лексическое окружение (logToConsole):
-   ```js
+```js
 const x = 1;  
   
 const logToConsole = function () {  

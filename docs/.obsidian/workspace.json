@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT/CSS/CSS Best practices.md",
-                "mode": "source",
+                "file": "IT/JS/Closures (Замыкания).md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CSS Best practices"
+              "title": "Closures (Замыкания)"
             },
             "group": "e4240834e1395df7"
           }
@@ -34,9 +34,9 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "IT/CSS/CSS Best practices.md",
+                "file": "IT/JS/Closures (Замыкания).md",
                 "options": {
-                  "collapse-filter": true,
+                  "collapse-filter": false,
                   "search": "",
                   "localJumps": 1,
                   "localBacklinks": true,
@@ -44,7 +44,7 @@
                   "localInterlinks": false,
                   "showTags": false,
                   "showAttachments": false,
-                  "hideUnresolved": false,
+                  "hideUnresolved": true,
                   "collapse-color-groups": true,
                   "colorGroups": [],
                   "collapse-display": true,
@@ -57,12 +57,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5475165221266325,
-                  "close": false
+                  "scale": 0.6218835522028111,
+                  "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of CSS Best practices"
+              "title": "Graph of Closures (Замыкания)"
             },
             "group": "e4240834e1395df7"
           }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IT/CSS/CSS Best practices.md",
+                "file": "IT/ООП/ООП. Основные понятия.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +149,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for CSS Best practices"
+              "title": "Backlinks for ООП. Основные понятия"
             }
           },
           {
@@ -158,12 +158,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IT/CSS/CSS Best practices.md",
+                "file": "IT/ООП/ООП. Основные понятия.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from CSS Best practices"
+              "title": "Outgoing links from ООП. Основные понятия"
             }
           },
           {
@@ -187,13 +187,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IT/CSS/CSS Best practices.md",
+                "file": "IT/ООП/ООП. Основные понятия.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CSS Best practices"
+              "title": "Outline of ООП. Основные понятия"
             }
           }
         ]
@@ -216,16 +216,31 @@
   },
   "active": "901f6c997fbdc56c",
   "lastOpenFiles": [
-    "Note Example.md",
+    "IT/JS/0. JavaScript.md",
+    "IT/JS/Отличие var от let.md",
+    "IT/JS/Scope (область видимости).md",
+    "IT/JS/Безопасные способы мутировать объект.md",
+    "IT/JS/Хранение переменных по ссылке и по значению.md",
+    "IT/JS/Falsy значения.md",
+    "IT/JS/Типы данных в JavaScript.md",
+    "IT/CSS/Flex/Flex.md",
+    "IT/CSS/0. CSS.md",
+    "IT/CSS/Flex/flex-grow, flex-shrink, flex-basis.md",
+    "IT/Angular/0. Angular.md",
+    "IT/ООП/ООП. Основные понятия.md",
+    "IT/ООП/Основные концепции ООП.md",
+    "IT/ООП/0. ООП.md",
+    "IT/CSS/Методология.md",
+    "IT/HTML/0. HTML.md",
+    "IT/JS/Set.md",
+    "IT/Задачи/Задачи Map и Set.md",
+    "IT/JS/Map.md",
+    "IT/Git/Git-префексы для коммитов.md",
+    "IT/Git/Правила именования коммитов.md",
     "IT/CSS/CSS Best practices.md",
+    "Note Example.md",
     "IT/Общее/Best Practices.md",
     "IT/HTML/HTML Best Practices.md",
-    "IT/Общее/Краткие правила чистого кода.md",
-    "IT/Общее/Правила чистого кода.md",
-    "IT/IT.md",
-    "IT/Git/0. Git.md",
-    "index.md",
-    "Git.md",
-    "IT/Git/Git-префексы для коммитов.md"
+    "IT/Общее/Краткие правила чистого кода.md"
   ]
 }
