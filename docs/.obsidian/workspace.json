@@ -6,6 +6,7 @@
       {
         "id": "61274f0eaac5c287",
         "type": "tabs",
+        "dimension": 55.38321167883211,
         "children": [
           {
             "id": "901f6c997fbdc56c",
@@ -13,14 +14,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT/CSS/0. CSS.md",
+                "file": "IT/JS/0. JavaScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0. CSS"
+              "title": "0. JavaScript"
             },
             "group": "e4240834e1395df7"
+          },
+          {
+            "id": "59510230c39d8d1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IT/JS/Массивы.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Массивы"
+            }
           },
           {
             "id": "a8511e009a48a5b4",
@@ -42,6 +57,7 @@
       {
         "id": "a764d31f7f61faf8",
         "type": "tabs",
+        "dimension": 44.61678832116788,
         "children": [
           {
             "id": "45d0f1806928896b",
@@ -49,7 +65,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "IT/CSS/0. CSS.md",
+                "file": "IT/JS/0. JavaScript.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -77,7 +93,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 0. CSS"
+              "title": "Graph of 0. JavaScript"
             },
             "group": "e4240834e1395df7"
           }
@@ -229,13 +245,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "76439087a40f7410",
+  "active": "59510230c39d8d1c",
   "lastOpenFiles": [
-    "assets/Pasted image 20251031155030.png",
-    "IT/CSS/Единицы измерения.md",
-    "IT/CSS/0. CSS.md",
-    "IT/JS/Генераторы.md",
     "IT/JS/0. JavaScript.md",
+    "IT/JS/Массивы.md",
+    "IT/CSS/0. CSS.md",
+    "IT/CSS/Единицы измерения.md",
+    "assets/Pasted image 20251031155030.png",
+    "IT/JS/Генераторы.md",
     "IT/JS/Map.md",
     "IT/JS/Функция итератор.md",
     "[[Функция.md",
