@@ -65,8 +65,7 @@
               "title": "async and await"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "a764d31f7f61faf8",
@@ -259,15 +258,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "6d3a2923b6cc0dbc",
+  "active": "901f6c997fbdc56c",
   "lastOpenFiles": [
     "IT/JS/0. JavaScript.md",
+    "Методы массивов.md",
     "Callback (функция обратного вызова) (Колбэк-функция).md",
     "IT/JS/async and await.md",
     "IT/JS/Promises.md",
     "IT/CSS/Единицы измерения.md",
     "Псевдомассивы.md",
-    "Методы массивов.md",
     "IT/CSS/Flex/Flex.md",
     "IT/JS/Массивы.md",
     "IT/CSS/0. CSS.md",
