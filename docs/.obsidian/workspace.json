@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Методы массивов.md",
+                "file": "IT/JS/Методы массивов.md",
                 "mode": "source",
                 "source": false
               },
@@ -78,7 +78,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Методы массивов.md",
+                "file": "IT/JS/Методы массивов.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -260,13 +260,14 @@
   },
   "active": "901f6c997fbdc56c",
   "lastOpenFiles": [
+    "IT/JS/Callback (функция обратного вызова) (Колбэк-функция).md",
+    "IT/JS/Методы массивов.md",
+    "IT/JS/Оператор typeof.md",
     "IT/JS/0. JavaScript.md",
-    "Методы массивов.md",
-    "Callback (функция обратного вызова) (Колбэк-функция).md",
     "IT/JS/async and await.md",
     "IT/JS/Promises.md",
     "IT/CSS/Единицы измерения.md",
-    "Псевдомассивы.md",
+    "IT/JS/Псевдомассивы.md",
     "IT/CSS/Flex/Flex.md",
     "IT/JS/Массивы.md",
     "IT/CSS/0. CSS.md",
@@ -285,7 +286,6 @@
     "IT/JS/Falsy значения.md",
     "IT/JS/Типы данных в JavaScript.md",
     "IT/CSS/Flex/flex-grow, flex-shrink, flex-basis.md",
-    "IT/Angular/0. Angular.md",
-    "IT/ООП/ООП. Основные понятия.md"
+    "IT/Angular/0. Angular.md"
   ]
 }
