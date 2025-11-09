@@ -6,20 +6,34 @@
       {
         "id": "61274f0eaac5c287",
         "type": "tabs",
-        "dimension": 65.6021897810219,
+        "dimension": 48.81194840461643,
         "children": [
+          {
+            "id": "11bb4eb7ae26a0ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IT/JS/Методы массивов/slice().md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "slice()"
+            }
+          },
           {
             "id": "901f6c997fbdc56c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT/JS/Методы массивов.md",
+                "file": "IT/JS/Методы массивов/reduce().md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Методы массивов"
+              "title": "reduce()"
             },
             "group": "e4240834e1395df7"
           },
@@ -36,41 +50,13 @@
               "icon": "lucide-file",
               "title": "0. JavaScript"
             }
-          },
-          {
-            "id": "6d3a2923b6cc0dbc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Callback (функция обратного вызова) (Колбэк-функция).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Callback (функция обратного вызова) (Колбэк-функция)"
-            }
-          },
-          {
-            "id": "e3c4a07d28fd377d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IT/JS/async and await.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "async and await"
-            }
           }
         ]
       },
       {
         "id": "a764d31f7f61faf8",
         "type": "tabs",
-        "dimension": 34.3978102189781,
+        "dimension": 51.18805159538356,
         "children": [
           {
             "id": "45d0f1806928896b",
@@ -78,7 +64,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "IT/JS/Методы массивов.md",
+                "file": "IT/JS/Методы массивов/reduce().md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -101,12 +87,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.24045999786887387,
+                  "scale": 0.3124436121590807,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Методы массивов"
+              "title": "Graph of reduce()"
             },
             "group": "e4240834e1395df7"
           }
@@ -258,12 +244,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "901f6c997fbdc56c",
+  "active": "11bb4eb7ae26a0ed",
   "lastOpenFiles": [
-    "IT/JS/Callback (функция обратного вызова) (Колбэк-функция).md",
-    "IT/JS/Методы массивов.md",
-    "IT/JS/Оператор typeof.md",
+    "IT/JS/Безопасные способы мутировать объект.md",
+    "IT/JS/Методы массивов/slice().md",
+    "IT/JS/Методы массивов/reduce().md",
+    "IT/JS/Методы массивов/Методы массивов.md",
     "IT/JS/0. JavaScript.md",
+    "IT/JS/Методы массивов/forEach().md",
+    "IT/JS/Методы массивов/Array.isArray().md",
+    "IT/JS/Методы массивов/map().md",
+    "IT/JS/Методы массивов",
+    "IT/JS/Callback (функция обратного вызова) (Колбэк-функция).md",
+    "IT/JS/Оператор typeof.md",
     "IT/JS/async and await.md",
     "IT/JS/Promises.md",
     "IT/CSS/Единицы измерения.md",
@@ -280,12 +273,6 @@
     "IT/IT.md",
     "IT/JS/Closures (Замыкания).md",
     "IT/JS/Отличие var от let.md",
-    "IT/JS/Scope (область видимости).md",
-    "IT/JS/Безопасные способы мутировать объект.md",
-    "IT/JS/Хранение переменных по ссылке и по значению.md",
-    "IT/JS/Falsy значения.md",
-    "IT/JS/Типы данных в JavaScript.md",
-    "IT/CSS/Flex/flex-grow, flex-shrink, flex-basis.md",
-    "IT/Angular/0. Angular.md"
+    "IT/JS/Scope (область видимости).md"
   ]
 }
