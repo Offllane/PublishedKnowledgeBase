@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT/JS/Методы массивов/slice().md",
+                "file": "IT/JS/Методы массивов/splice().md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "slice()"
+              "title": "splice()"
             }
           },
           {
@@ -68,7 +68,7 @@
                 "options": {
                   "collapse-filter": false,
                   "search": "",
-                  "localJumps": 3,
+                  "localJumps": 4,
                   "localBacklinks": true,
                   "localForelinks": true,
                   "localInterlinks": true,
@@ -246,11 +246,18 @@
   },
   "active": "11bb4eb7ae26a0ed",
   "lastOpenFiles": [
-    "IT/JS/Безопасные способы мутировать объект.md",
-    "IT/JS/Методы массивов/slice().md",
-    "IT/JS/Методы массивов/reduce().md",
     "IT/JS/Методы массивов/Методы массивов.md",
+    "IT/JS/Методы массивов/splice().md",
+    "IT/Общее/Принципы разработки/0. Принципы разработки.md",
+    "IT/Общее/Стадии отрисовки (рендера) страницы в браузере.md",
+    "IT/Общее/0. Общие понятия программирования.md",
+    "IT/Общее/Принципы разработки/SOLID.md",
+    "IT/ООП/0. ООП.md",
+    "IT/IT.md",
+    "IT/JS/Методы массивов/reduce().md",
+    "IT/JS/Методы массивов/slice().md",
     "IT/JS/0. JavaScript.md",
+    "IT/JS/Безопасные способы мутировать объект.md",
     "IT/JS/Методы массивов/forEach().md",
     "IT/JS/Методы массивов/Array.isArray().md",
     "IT/JS/Методы массивов/map().md",
@@ -266,13 +273,6 @@
     "IT/CSS/0. CSS.md",
     "assets/Pasted image 20251031155030.png",
     "IT/JS/Генераторы.md",
-    "IT/JS/Map.md",
-    "IT/JS/Функция итератор.md",
-    "[[Функция.md",
-    "[[итератор]].md",
-    "IT/IT.md",
-    "IT/JS/Closures (Замыкания).md",
-    "IT/JS/Отличие var от let.md",
-    "IT/JS/Scope (область видимости).md"
+    "IT/JS/Map.md"
   ]
 }
