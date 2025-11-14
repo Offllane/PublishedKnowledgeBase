@@ -6,7 +6,6 @@
       {
         "id": "61274f0eaac5c287",
         "type": "tabs",
-        "dimension": 48.81194840461643,
         "children": [
           {
             "id": "11bb4eb7ae26a0ed",
@@ -14,87 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT/JS/Методы массивов/splice().md",
+                "file": "templates/Method template.md",
                 "mode": "source",
-                "source": false
+                "source": true,
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "splice()"
+              "title": "Method template"
             }
-          },
-          {
-            "id": "901f6c997fbdc56c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IT/JS/Методы массивов/reduce().md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "reduce()"
-            },
-            "group": "e4240834e1395df7"
-          },
-          {
-            "id": "59510230c39d8d1c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IT/JS/0. JavaScript.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "0. JavaScript"
-            }
-          }
-        ]
-      },
-      {
-        "id": "a764d31f7f61faf8",
-        "type": "tabs",
-        "dimension": 51.18805159538356,
-        "children": [
-          {
-            "id": "45d0f1806928896b",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "IT/JS/Методы массивов/reduce().md",
-                "options": {
-                  "collapse-filter": false,
-                  "search": "",
-                  "localJumps": 4,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": true,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": true,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.3124436121590807,
-                  "close": true
-                }
-              },
-              "icon": "lucide-git-fork",
-              "title": "Graph of reduce()"
-            },
-            "group": "e4240834e1395df7"
           }
         ]
       }
@@ -244,35 +170,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "11bb4eb7ae26a0ed",
+  "active": "76439087a40f7410",
   "lastOpenFiles": [
-    "IT/JS/Методы массивов/Методы массивов.md",
-    "IT/JS/Методы массивов/splice().md",
-    "IT/Общее/Принципы разработки/0. Принципы разработки.md",
+    "IT/Общее/0. Общее.md",
+    "IT/Общее/Принципы разработки/Принципы разработки.md",
+    "IT/Общее/Принципы разработки/Для чего нужны принципы разработки?.md",
+    "IT/Общее/API.md",
     "IT/Общее/Стадии отрисовки (рендера) страницы в браузере.md",
-    "IT/Общее/0. Общие понятия программирования.md",
+    "IT/Общее/Способы хранения данных в браузере.md",
+    "IT/Общее/Правила чистого кода.md",
     "IT/Общее/Принципы разработки/SOLID.md",
+    "IT/Общее/LocalStorage, SessionStorage.md",
+    "IT/Общее/REST API.md",
+    "IT/JS/Методы массивов/Методы массивов.md",
+    "IT/JS/Методы массивов/toSpliced().md",
+    "IT/JS/0. JavaScript.md",
+    "templates/Method template.md",
+    "IT/JS/Методы массивов/reduce().md",
+    "templates",
+    "IT/JS/Методы массивов/Array.isArray().md",
+    "index.md",
+    "IT/JS/Массивы.md",
+    "IT/JS/Методы массивов/splice().md",
     "IT/ООП/0. ООП.md",
     "IT/IT.md",
-    "IT/JS/Методы массивов/reduce().md",
     "IT/JS/Методы массивов/slice().md",
-    "IT/JS/0. JavaScript.md",
     "IT/JS/Безопасные способы мутировать объект.md",
     "IT/JS/Методы массивов/forEach().md",
-    "IT/JS/Методы массивов/Array.isArray().md",
     "IT/JS/Методы массивов/map().md",
     "IT/JS/Методы массивов",
     "IT/JS/Callback (функция обратного вызова) (Колбэк-функция).md",
-    "IT/JS/Оператор typeof.md",
-    "IT/JS/async and await.md",
-    "IT/JS/Promises.md",
-    "IT/CSS/Единицы измерения.md",
-    "IT/JS/Псевдомассивы.md",
-    "IT/CSS/Flex/Flex.md",
-    "IT/JS/Массивы.md",
-    "IT/CSS/0. CSS.md",
-    "assets/Pasted image 20251031155030.png",
-    "IT/JS/Генераторы.md",
-    "IT/JS/Map.md"
+    "assets/Pasted image 20251031155030.png"
   ]
 }
