@@ -6,6 +6,7 @@
       {
         "id": "61274f0eaac5c287",
         "type": "tabs",
+        "dimension": 59.215328467153284,
         "children": [
           {
             "id": "11bb4eb7ae26a0ed",
@@ -13,14 +14,60 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/Method template.md",
+                "file": "IT/Общее/Парадигмы программирования.md",
                 "mode": "source",
-                "source": true,
+                "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Method template"
-            }
+              "title": "Парадигмы программирования"
+            },
+            "group": "f2a6e80f3e5dfe4a"
+          }
+        ]
+      },
+      {
+        "id": "3d89c15dd69c3dc2",
+        "type": "tabs",
+        "dimension": 40.784671532846716,
+        "children": [
+          {
+            "id": "6248f4edd850ec09",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "IT/Общее/Парадигмы программирования.md",
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 4,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.18784454684663673,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Graph of Парадигмы программирования"
+            },
+            "group": "f2a6e80f3e5dfe4a"
           }
         ]
       }
@@ -170,36 +217,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "76439087a40f7410",
+  "active": "11bb4eb7ae26a0ed",
   "lastOpenFiles": [
     "IT/Общее/0. Общее.md",
+    "IT/Общее/Cookie.md",
+    "IT/Общее/Парадигмы программирования.md",
+    "IT/ООП/0. ООП.md",
+    "IT/ООП/ООП. Основные понятия.md",
+    "templates/Method template.md",
+    "0. ООП].md",
+    "IT/Общее/Принципы разработки/SOLID.md",
     "IT/Общее/Принципы разработки/Принципы разработки.md",
     "IT/Общее/Принципы разработки/Для чего нужны принципы разработки?.md",
     "IT/Общее/API.md",
     "IT/Общее/Стадии отрисовки (рендера) страницы в браузере.md",
     "IT/Общее/Способы хранения данных в браузере.md",
     "IT/Общее/Правила чистого кода.md",
-    "IT/Общее/Принципы разработки/SOLID.md",
     "IT/Общее/LocalStorage, SessionStorage.md",
     "IT/Общее/REST API.md",
     "IT/JS/Методы массивов/Методы массивов.md",
     "IT/JS/Методы массивов/toSpliced().md",
     "IT/JS/0. JavaScript.md",
-    "templates/Method template.md",
     "IT/JS/Методы массивов/reduce().md",
     "templates",
     "IT/JS/Методы массивов/Array.isArray().md",
     "index.md",
     "IT/JS/Массивы.md",
     "IT/JS/Методы массивов/splice().md",
-    "IT/ООП/0. ООП.md",
     "IT/IT.md",
     "IT/JS/Методы массивов/slice().md",
-    "IT/JS/Безопасные способы мутировать объект.md",
-    "IT/JS/Методы массивов/forEach().md",
-    "IT/JS/Методы массивов/map().md",
     "IT/JS/Методы массивов",
-    "IT/JS/Callback (функция обратного вызова) (Колбэк-функция).md",
     "assets/Pasted image 20251031155030.png"
   ]
 }
