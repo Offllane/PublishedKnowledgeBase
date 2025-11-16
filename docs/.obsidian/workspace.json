@@ -9,22 +9,37 @@
         "dimension": 59.215328467153284,
         "children": [
           {
-            "id": "11bb4eb7ae26a0ed",
+            "id": "a1e4a3b5f404090f",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IT/Общее/Принципы разработки/SOLID/SOLID.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "SOLID"
+            }
+          },
+          {
+            "id": "fd940b9fa0d2417d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT/Общее/Парадигмы программирования.md",
+                "file": "IT/Общее/Принципы разработки/SOLID/Dependency Inversion principle (принцип инверсии зависимостей).md",
                 "mode": "source",
-                "source": false,
-                "backlinks": false
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Парадигмы программирования"
-            },
-            "group": "f2a6e80f3e5dfe4a"
+              "title": "Dependency Inversion principle (принцип инверсии зависимостей)"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "3d89c15dd69c3dc2",
@@ -37,17 +52,17 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "IT/Общее/Парадигмы программирования.md",
+                "file": "IT/Общее/Принципы разработки/SOLID/Dependency Inversion principle (принцип инверсии зависимостей).md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
-                  "localJumps": 4,
+                  "localJumps": 5,
                   "localBacklinks": true,
                   "localForelinks": true,
                   "localInterlinks": false,
                   "showTags": false,
                   "showAttachments": false,
-                  "hideUnresolved": false,
+                  "hideUnresolved": true,
                   "collapse-color-groups": true,
                   "colorGroups": [],
                   "collapse-display": true,
@@ -60,14 +75,13 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.18784454684663673,
+                  "scale": 0.18288155249678897,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Парадигмы программирования"
-            },
-            "group": "f2a6e80f3e5dfe4a"
+              "title": "Graph of Dependency Inversion principle (принцип инверсии зависимостей)"
+            }
           }
         ]
       }
@@ -88,7 +102,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byCreatedTimeReverse",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -217,35 +231,39 @@
       "bases:Create new base": false
     }
   },
-  "active": "11bb4eb7ae26a0ed",
+  "active": "fd940b9fa0d2417d",
   "lastOpenFiles": [
-    "IT/Общее/0. Общее.md",
-    "IT/Общее/Cookie.md",
-    "IT/Общее/Парадигмы программирования.md",
-    "IT/ООП/0. ООП.md",
-    "IT/ООП/ООП. Основные понятия.md",
-    "templates/Method template.md",
-    "0. ООП].md",
-    "IT/Общее/Принципы разработки/SOLID.md",
+    "IT/Общее/Принципы разработки/SOLID/SOLID.md",
+    "files/Pasted image 20251116172016.png",
+    "IT/Общее/Принципы разработки/SOLID/Dependency Inversion principle (принцип инверсии зависимостей).md",
+    "files/Pasted image 20251116213917.png",
+    "IT/Общее/Принципы разработки/SOLID/Interface Segregation principle (принцип разделения интерфейса).md",
+    "IT/Общее/Принципы разработки/SOLID/Liskov substitution principle (Принцип подстановки Барбары Лисков.md",
+    "IT/JS/JavaScript.md",
+    "files/Pasted image 20251116172056.png",
+    "IT/Общее/Принципы разработки/SOLID/Open-closed principle (Принцип открытости и закрытости).md",
+    "IT/Общее/Принципы разработки/SOLID/Single responsibility principle (Принцип единственной ответственности).md",
+    "assets/Pasted image 20251116094204.png",
+    "IT/Git/Git.md",
+    "IT/CSS/CSS.md",
+    "IT/CSS/@mixin and @include.md",
+    "IT/Общее/Общее.md",
+    "IT/Общее/API.md",
     "IT/Общее/Принципы разработки/Принципы разработки.md",
     "IT/Общее/Принципы разработки/Для чего нужны принципы разработки?.md",
-    "IT/Общее/API.md",
-    "IT/Общее/Стадии отрисовки (рендера) страницы в браузере.md",
-    "IT/Общее/Способы хранения данных в браузере.md",
-    "IT/Общее/Правила чистого кода.md",
-    "IT/Общее/LocalStorage, SessionStorage.md",
-    "IT/Общее/REST API.md",
-    "IT/JS/Методы массивов/Методы массивов.md",
-    "IT/JS/Методы массивов/toSpliced().md",
-    "IT/JS/0. JavaScript.md",
-    "IT/JS/Методы массивов/reduce().md",
-    "templates",
-    "IT/JS/Методы массивов/Array.isArray().md",
+    "IT/Общее/Принципы разработки/SOLID",
+    "IT/Задачи/0. Все задачи.md",
     "index.md",
-    "IT/JS/Массивы.md",
-    "IT/JS/Методы массивов/splice().md",
-    "IT/IT.md",
-    "IT/JS/Методы массивов/slice().md",
+    "IT/TS/TS Best Practices.md",
+    "IT/TS/Добавление свойств в зависимости от значения другого свойства.md",
+    "IT/TS/0. TypeScript.md",
+    "IT/Общее/ООП/ООП. Основные понятия.md",
+    "IT/Общее/ООП/0. ООП.md",
+    "IT/Общее/ООП/Основные концепции ООП.md",
+    "IT/Общее/Парадигмы программирования.md",
+    "IT/Общее/Cookie.md",
+    "templates/Method template.md",
+    "templates",
     "IT/JS/Методы массивов",
     "assets/Pasted image 20251031155030.png"
   ]

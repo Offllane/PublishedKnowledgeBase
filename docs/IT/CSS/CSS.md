@@ -1,5 +1,5 @@
 1. [[CSS Best practices]]
-2. [[1. @mixin and @include]]
+2. [[@mixin and @include]]
 3. [[Методология]]
 4. [[Flex]]
 5. [[Единицы измерения]]
