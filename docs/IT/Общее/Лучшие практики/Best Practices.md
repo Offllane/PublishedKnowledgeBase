@@ -3,3 +3,4 @@
 3. [[HTML Best Practices]]
 4. [[CSS Best practices]]
 5. [[TS Best Practices]]
+6. [[Инсайты удачных решений]]
