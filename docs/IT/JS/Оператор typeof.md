@@ -1,3 +1,10 @@
+---
+
+reviews:
+- date: 2026-06-04T10:24:43.703+00:00
+  rating: 3
+
+---
 ```js
 typeof 'str' // 'string'
 typeof 0 // 'number'

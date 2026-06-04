@@ -1,3 +1,7 @@
+---
+reviews: []
+
+---
 #### Все типы данных в JavaScript:
 1. number
 2. bigInt
